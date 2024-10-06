@@ -45,9 +45,7 @@ r2 = r2_score(y_test, y_pred_combined)
 y_test_flat = y_test.flatten()
 y_pred_combined_flat = y_pred_combined.flatten()
 
-y_pred_combined_int_flat = np.rint(y_pred_combined_flat).astype(int)
-
-pearson_corr = np.corrcoef(y_test_flat, y_pred_combined_int_flat)[0, 1]
+pearson_corr = np.corrcoef(y_test_flat, y_pred_combined_flat)[0, 1]
 
 print(f'Pearson Correlation Coefficient: {pearson_corr}')
 print(f'Mean Squared Error: {mse}')
